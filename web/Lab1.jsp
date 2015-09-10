@@ -22,7 +22,7 @@
                 }
             %>
         </h2>
-        <form id="rectCalc" method="POST" action="Lab2Controller">
+        <form id="rectCalc" method="POST" action="Lab1Controller">
             Rectangle Width: <input name="width" type="number" value="0" min="0"></input><br>
             Rectangle Height:<input name="height" type="number" value="0" min="0"> </input><br>
             <input type="submit" name="calculate" value="Calculate Area"></input>

@@ -44,7 +44,7 @@ public class Lab1Controller extends HttpServlet {
         request.setAttribute("rectArea", area);
         
         // Push website to view.
-        RequestDispatcher view = request.getRequestDispatcher("Rectangle.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("Lab1Output.jsp");
         view.forward(request, response);
     }
 
