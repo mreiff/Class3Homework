@@ -13,9 +13,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script> src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <title>Rectangle Calculator</title>
     </head>
     <body>
+        <img style="width:200px;" src="images/rectangle.jpeg"/>
         <h1>Calculate the Area of a Rectangle</h1>
         <h2><fmt:formatNumber value="${rectArea}" maxFractionDigits="3"/></h2>
         <form id="rectCalc" method="POST" action="Lab3ControllerWithEL">
@@ -25,6 +27,7 @@
             <input type="submit" class="btn btn-primary" name="calculate" value="Calculate Area"></input>
         </form>
         <br><br><br>
+        <img style="width:200px;" src="images/circle.jpg"/>
         <h1>Calculate the Area of a Circle</h1>
         <h2><fmt:formatNumber value="${cirArea}" maxFractionDigits="3"/></h2>
         <form id="cirCalc" method="POST" action="Lab3ControllerWithEL">
@@ -33,6 +36,7 @@
             <input type="submit" class="btn btn-primary" name="calculate" value="Calculate Area"></input>
         </form>
         <br><br><br>
+        <img style="width:200px;" src="images/triangle.png"/>
         <h1>Calculate the Area of a Triangle</h1>
         <h2><fmt:formatNumber value="${triArea}" maxFractionDigits="3"/></h2>
         <form id="triCalc" method="POST" action="Lab3ControllerWithEL">
@@ -42,9 +46,15 @@
             <input type="submit" class="btn btn-primary" name="calculate" value="Calculate Area"></input>
         </form>
         <br>
-        <form id="results">
-            <label for="final"  value="Comming Soon."/>
-            <input name="final" type="submit" class="btn btn-success disabled" value="Show All Calculations"></input>
-        </form>
+        <div id="warning" name="warning" class="alert alert-info">
+            <strong>Warning!</strong> This feature is currently under development. It is coming soon.
+        </div>
+        <script>
+                $("#final").click(function(e){
+                    e.preventDefault();
+                    $("#warning").toggleClass("hidden");
+                });
+        </script>
+        <a id="final" name="final" class="btn btn-success disabled">Show All Calculations</a>
     </body>
 </html>
