@@ -63,6 +63,7 @@
                 $("#show").click(function(e){
                     //alert("TESTIN");
                     $("#warning").toggleClass("hidden");
+                    $("#show").addClass("disabled");
                 });
         </script>
       
